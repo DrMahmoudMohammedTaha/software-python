@@ -357,6 +357,15 @@ from dmIO.names import * # import everything, no namespaces
 #################################	
 ## Class
 #################################	
+# python doesn't support multiple constractors
+# but you can pass default value if it's not passed
+def __init__(self, city="Berlin"):
+  self.city = city
+
+# Python does not support function overloading. 
+# When we define multiple functions with the same name, 
+# the later one always overrides the prior and thus, in the namespace, 
+# there will always be a single entry against each function name.
 
 # How to Create a Class
 class TestClass:
