@@ -529,3 +529,24 @@ xmlFile = "blog.rss.xml"
 dom = ElementTree.parse(xmlFile) # load xml from a file
 xmlContent = "<rss><channel>...</channel></rss>"
 dom = ElementTree.fromstring(xmlContent) # load xml from string
+
+#################################	
+## random
+#################################	
+import random
+# prints a random value from the list
+list1 = [1, 2, 3, 4, 5, 6]
+print(random.choice(list1))
+
+# Random numbers depend on the seeding value. 
+# if the seeding value is 5 then the output of the  program will always be the same.
+print(random.random())
+
+# return random integer
+randint(start, end)
+
+# get random number
+random.random()
+
+# shuffle list
+random.shuffle(sequence, function)
