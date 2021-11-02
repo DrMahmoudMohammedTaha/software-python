@@ -550,3 +550,19 @@ random.random()
 
 # shuffle list
 random.shuffle(sequence, function)
+
+
+
+
+#################################	
+## lambda
+#################################
+x = lambda a, b : a * b
+print(x(5, 6))
+
+# The power of lambda is better shown when you use them as an anonymous function inside another function.
+# Say you have a function definition that takes one argument, and that argument will be multiplied with an unknown number:
+def myfunc(n):
+  return lambda a : a * n
+mydoubler = myfunc(2)
+print(mydoubler(11))
