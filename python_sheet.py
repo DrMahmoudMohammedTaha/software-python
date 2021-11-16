@@ -566,3 +566,32 @@ def myfunc(n):
   return lambda a : a * n
 mydoubler = myfunc(2)
 print(mydoubler(11))
+
+# call function with it's string name
+getattr("class_name", "function name")()
+
+# create object with class string name
+globals()["class_name"]()
+
+
+
+#################################	
+## gui library
+#################################
+from tkinter import*
+class TK_extended(Tk):
+    def __init__(self, master , title):
+        self.master = master
+        self.title = title
+    def create(self):
+        self.master = Tk()
+        self.master.title(self.title)
+    def resize(self, width , height):
+        self.master.geometry("{}x{}".format(width , height))
+    def generate(self):
+        self.master.mainloop()
+
+root = TK_extended("win" , "My Window")
+root.create()
+root.resize(1000 , 300)
+root.generate()
