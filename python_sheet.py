@@ -475,11 +475,9 @@ from datetime import time
 from datetime import datetime
 today = date.today()
 print("Today is {month}/{day}/{year}".format(month=today.month, day=today.day, year=today.year)) 
-# Prints: Today is 11/25/2013
 
 now = datetime.now()
 print("Right now it's {0}h:{1}m:{2}.{3}sec".format(now.hour, now.minute, now.second,now.microsecond//1000))
-# Prints: Right now it's 16h:20m:5.867sec
 
 # use timedelta calss for date operations
 from datetime import timedelta
@@ -595,3 +593,19 @@ root = TK_extended("win" , "My Window")
 root.create()
 root.resize(1000 , 300)
 root.generate()
+
+
+#################################	
+## overloaden operator
+#################################
+class A:
+    def __init__(self, a):
+        self.a = a
+ 
+    # adding two objects
+    def __add__(self, o):
+        return self.a + o.a
+ob1 = A(1)
+ob2 = A(2)
+
+print(ob1 + ob2)
