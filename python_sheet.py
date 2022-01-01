@@ -249,7 +249,7 @@ print(x)
 # to offer a great way of organizing and storing data in Python. 
 # They are mutable, meaning you can change the stored information.
 # A key value can be either a string, Boolean, or integer. 
-Customer 1= {'username': 'john-sea', 'online': false, 'friends':100}
+Customer = {'username': 'john-sea', 'online': false, 'friends':100}
 
 # How to Create a Python Dictionary
 new_dict = {}
