@@ -5,9 +5,9 @@
 # Every value in Python is called an "object". And every object has a specific data type. 
 # The three most-used data types are as follows:
 
- -2, -1, 0, 1, 2, 3, 4, 5   # Integers (int)
+-2, -1, 0, 1, 2, 3, 4, 5   # Integers (int)
 
- -1.25, -1.0, --0.5, 0.0, 0.5, 1.0, 1.25    # Floating-point numbers (float)
+-1.25, -1.0, -0.5, 0.0, 0.5, 1.0, 1.25    # Floating-point numbers (float)
 
 # The following are considered False
     # None
@@ -20,6 +20,11 @@
 # In Python 3, strings are immutable. If you already defined one, you cannot change it later on.
 # While you can modify a string with commands such as replace() or join(), 
 # they will create a copy of a string and apply modification to it, rather than rewrite the original one.
+
+# raw string 
+# to have string without any special characters
+raw = r"I wouldn\t escape this\n."
+print(raw) # I wouldn\t escape this\n.
 
 # string rules
 # 1- You can create a string in three ways using single, double or triple quotes. 
@@ -44,9 +49,12 @@ upper()
 lower()
 find()
 index()
+isalnum()
+isalpha()
+isnumeric()
 
 # string format 
-"Hello {0}, today is {1}. Right {0}?".format("Michael", "Monday")) # Hello Michael, today is Monday. Right Michael?
+"Hello {0}, today is {1}. Right {0}?".format("Michael", "Monday") # Hello Michael, today is Monday. Right Michael?
 "{0:,} is pretty big!".format(1234567890) # 1,234,567,890 is pretty big!
 "You can name your args {jeff} and {tony}!".format(jeff="bigj", tony="t-boy")
 
@@ -470,6 +478,17 @@ finally:
 
 # to throw error
 # raise UserNotFoundError(userId)
+
+
+# enums are defined as specialized classes
+import enum
+class DaysOfWeek(enum.Enum):
+    sunday = 1
+    monday = 2
+    tuesday = 3
+    wednesday = 4
+
+day = DaysOfWeek.wednesday
 
 #################################	
 ## date
