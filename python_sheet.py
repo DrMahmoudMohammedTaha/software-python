@@ -431,7 +431,6 @@ class Car(Vehicle):
         # Override brake method
         return "The car class is breaking slowly!"
 
-
 # print all vars
 def printVars(self):
     attrs = vars(self)
@@ -478,7 +477,6 @@ finally:
 
 # to throw error
 # raise UserNotFoundError(userId)
-
 
 # enums are defined as specialized classes
 import enum
@@ -549,8 +547,26 @@ with open(srcFile, 'rb') as fin:
 from xml.etree import ElementTree
 xmlFile = "blog.rss.xml"
 dom = ElementTree.parse(xmlFile) # load xml from a file
+items = dom.findall('channel/item')
+print("Found {0} blog entries.".format(len(items)))
+entries = []
+for item in items:
+    title = item.find('title').text
+    link = item.find('link').text
+    entries.append( (title, link) )
+
+# xml from string
 xmlContent = "<rss><channel>...</channel></rss>"
 dom = ElementTree.fromstring(xmlContent) # load xml from string
+
+# json from string 
+import json
+jsonTxt = '{"name": "Jeff", "age": 24}'
+d = json.loads(jsonTxt)
+
+# json from dictionary 
+d = dict(name="Jeff", age=24)
+jsonTxt = json.dumps(d)
 
 #################################	
 ## random
@@ -572,8 +588,6 @@ random.random()
 
 # shuffle list
 random.shuffle(sequence, function)
-
-
 
 
 #################################	
