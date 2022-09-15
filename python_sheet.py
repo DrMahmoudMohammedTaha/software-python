@@ -467,7 +467,7 @@ else:
 
 try:
     u = find_user(11)
-    u.registered = true
+    u.registered = True
     save_user(u)
     fout.write("User updated")
 except Exception as e:
