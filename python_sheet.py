@@ -58,6 +58,10 @@ isnumeric()
 "{0:,} is pretty big!".format(1234567890) # 1,234,567,890 is pretty big!
 "You can name your args {jeff} and {tony}!".format(jeff="bigj", tony="t-boy")
 
+# advanced target multiple items in array with format 
+# n is array of numbers with many items
+"({}{}{}) {}{}{}-{}{}{}{}".format(*n)
+
 # They can be combined via + or just adjacency
 "Combine " + "this" # "Combine this"
 "Combine " "this" # "Combine this"
@@ -701,3 +705,5 @@ PORT = 8000
 my_server = socketserver.TCPServer(("", PORT), handler_object)
 # Star the server
 my_server.serve_forever()
+
+
