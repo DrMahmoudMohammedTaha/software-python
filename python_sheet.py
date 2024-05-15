@@ -154,6 +154,57 @@ def keywordArguments(x, y, **kwargs):
     print(x, y, kwargs)
 keywordArguments(1, 2, z=2, u=1, mode="reversed") # prints 1 2 {'u': 1, 'z': 2, 'mode': 'reversed'}
 
+# call function with it's string name
+getattr("class_name", "function name")()
+
+# create object with class string name
+globals()["class_name"]()
+
+#################################	
+## Higher Order Functions
+#################################
+# A Function that contains other functions as a parameter or returns a function as an output
+
+## map function
+## executes a specified function for each item in an iterable.
+def myfunc(n):
+  return len(n)
+x = map(myfunc, ('apple', 'banana', 'cherry'))
+
+# map(function, iterables , iterables)
+def myfunc(a, b):
+  return a + b
+x = map(myfunc, ('apple', 'banana', 'cherry'), ('orange', 'lemon', 'pineapple'))
+
+## filter function
+## returns an iterator where the items are filtered through a function to test if the item is accepted or not.
+ages = [5, 12, 17, 18, 24, 32]
+def myFunc(x):
+  if x < 18:
+    return False
+  else:
+    return True
+adults = filter(myFunc, ages)
+
+## reduce function (aggregate function)
+## used to apply a particular function passed in its argument to all of the list elements
+# At first step, first two elements of sequence are picked and the result is obtained.
+# Next step is to apply the same function to the previously attained result 
+# and the number just succeeding the second element and the result is again stored.
+
+# importing functools for reduce() 
+import functools 
+  
+# initializing list 
+lis = [1, 3, 5, 6, 2] 
+  
+# using reduce to compute sum of list 
+print("The sum of the list elements is : ", end="") 
+print(functools.reduce(lambda a, b: a+b, lis)) 
+  
+# using reduce to compute maximum element from list 
+print("The maximum element of the list is : ", end="") 
+print(functools.reduce(lambda a, b: a if a > b else b, lis)) 
 
 #################################	
 ## Lists
@@ -606,13 +657,6 @@ def myfunc(n):
   return lambda a : a * n
 mydoubler = myfunc(2)
 print(mydoubler(11))
-
-# call function with it's string name
-getattr("class_name", "function name")()
-
-# create object with class string name
-globals()["class_name"]()
-
 
 
 #################################	
