@@ -283,7 +283,7 @@ list_variable = [x for x in iterable]
 # list comprehensions with two lists 
 list_variable = [ x * y for x in vec1 for y in vec2 ]
 
-# List comprehensions with if condition
+# List comprehensions with if condition (ternary operator)
 number_list = [x ** 2 for x in range(10) if x % 2 == 0]
 
 
