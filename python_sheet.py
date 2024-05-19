@@ -166,6 +166,7 @@ globals()["class_name"]()
 # A Function that contains other functions as a parameter or returns a function as an output
 
 ## map function
+# Note you need to cast it with list in python 3
 ## executes a specified function for each item in an iterable.
 def myfunc(n):
   return len(n)
