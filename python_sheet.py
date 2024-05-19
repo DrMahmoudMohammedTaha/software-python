@@ -286,6 +286,8 @@ list_variable = [ x * y for x in vec1 for y in vec2 ]
 # List comprehensions with if condition (ternary operator)
 number_list = [x ** 2 for x in range(10) if x % 2 == 0]
 
+# list comprehension with index 
+list2 = [x * ind  for ind, x in enumerate(list1)]
 
 #################################	
 ## Tuples
@@ -406,11 +408,18 @@ while v < 10:
 else:
     print("else v is now " + str(v))
 
+
+# loop with index
+for ind, obj in enumerate(list1):
+    if 4 > ind > 0:
+        list2.append(obj)
+
 # When your scripts are imported, they may run code you did not
 # intend to run
 # – Use the __name__ convention to test if your script is the main script.
 if __name__ == "__main__":
     #your code here
+
 
 #################################	
 ## import
