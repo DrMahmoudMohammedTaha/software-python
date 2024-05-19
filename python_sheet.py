@@ -278,11 +278,14 @@ beta_list = ["apple", "banana", "orange"]
 beta_list = beta_list.copy()
 
 # List  Comprehensions
-# List comprehensions are a handy option for creating lists based on existing lists.
 list_variable = [x for x in iterable]	
-# Here's a more complex example that features math operators, integers, and the range() function:
+
+# list comprehensions with two lists 
+list_variable = [ x * y for x in vec1 for y in vec2 ]
+
+# List comprehensions with if condition
 number_list = [x ** 2 for x in range(10) if x % 2 == 0]
-print(number_list)
+
 
 #################################	
 ## Tuples
@@ -648,6 +651,7 @@ random.shuffle(sequence, function)
 #################################	
 ## lambda
 #################################
+# lambda is an inline function that have any number of inputs and one expression
 x = lambda a, b : a * b
 print(x(5, 6))
 
