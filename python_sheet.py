@@ -489,6 +489,8 @@ class Animal: # base class
 class Cat(Animal): # cat is an animal
     def __init__(self, name, friskiness=50):
         super().__init__()
+        # can also be 
+        # Animal.__init__()
         self.name = name
         self.friskiness = friskiness
         print("creating cat" + name)
@@ -710,6 +712,21 @@ ob2 = A(2)
 
 print(ob1 + ob2)
 
+# __str__()	returns a string representation of the object
+# __len__()	returns the length of the object
+# Addition	p1 + p2	p1.__add__(p2)
+# Subtraction	p1 - p2	p1.__sub__(p2)
+# Multiplication	p1 * p2	p1.__mul__(p2)
+# Power	p1 ** p2	p1.__pow__(p2)
+# Division	p1 / p2	p1.__truediv__(p2)
+# Floor Division	p1 // p2	p1.__floordiv__(p2)
+# Remainder (modulo)	p1 % p2	p1.__mod__(p2)
+# Bitwise Left Shift	p1 << p2	p1.__lshift__(p2)
+# Bitwise Right Shift	p1 >> p2	p1.__rshift__(p2)
+# Bitwise AND	p1 & p2	p1.__and__(p2)
+# Bitwise OR	p1 | p2	p1.__or__(p2)
+# Bitwise XOR	p1 ^ p2	p1.__xor__(p2)
+# Bitwise NOT	~p1	p1.__invert__()
 
 #################################	
 ## run file direclty with arguments
