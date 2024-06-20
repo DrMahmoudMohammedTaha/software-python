@@ -62,6 +62,25 @@ isnumeric()
 # n is array of numbers with many items
 "({}{}{}) {}{}{}-{}{}{}{}".format(*n)
 
+# n the provided code snippet, the asterisk (*) is used for unpacking a list or tuple 
+# into individual arguments for a function call. This is often referred to as "argument unpacking."
+triads_to_try = [('italy', 'italian', 'spain'), ('india', 'delhi', 'japan'), ('man', 'woman', 'boy'), ('small', 'smaller', 'large')]
+for triad in triads_to_try:
+    print ('{} -> {} :: {} -> {}'.format( *triad, complete_analogy(*triad, word_to_vec_map)))
+# equivelant to 
+# ('{} -> {} :: {} -> {}'.format('italy', 'italian', 'spain', result)), where result is the output of complete_analogy('italy', 'italian', 'spain', word_to_vec_map)
+
+# Passing a Function Using with an arbitrary number of positional arguments
+def addition(*args):
+  return sum(args)
+print(addition(5, 10, 20, 6))
+
+# Passing a  Function Using with an arbitrary number of keyword arguments
+def food(**kwargs):
+  for items in kwargs:
+    print(f"{kwargs[items]} is a {items}")
+food(fruit = 'cherry', vegetable = 'potato', boy = 'srikrishna')
+
 # They can be combined via + or just adjacency
 "Combine " + "this" # "Combine this"
 "Combine " "this" # "Combine this"
